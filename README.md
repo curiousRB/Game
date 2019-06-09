@@ -5,8 +5,8 @@ import time
 import random
 global your_score, ai_score
 
-pop = input('what is your name? ').capitalize()
-print('nice to meet you', pop)
+name = input('what is your name? ').capitalize()
+print('nice to meet you', name)
 print(" ")
 time.sleep(2)
 ready = input("Are you ready to play? type 'yes' or 'no': ").lower()
