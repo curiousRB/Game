@@ -1,6 +1,3 @@
-# Game-could really use assistance
-Python 3.7, simple rock, paper, scissors
-
 import time
 import random
 global your_score, ai_score
@@ -65,7 +62,7 @@ if your_score <= str(10) or ai_score <= str(10):
             your_score += str(0)
             ai_score += str(1)
             time.sleep(1)
-            print('You chose scissors and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
+            print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
         elif game_two == 'rock' and choice == 's':
             print('You won! Try again')
             your_score += str(0)
@@ -89,18 +86,20 @@ if your_score <= str(10) or ai_score <= str(10):
             ai_score += str(0)
             time.sleep(1)
             print('You chose rock and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'scissors' and choice == 'p':
+        elif game_two == 'rock' and choice == 'p':
             print('You lost! Try again')
             your_score += str(0)
             ai_score += str(1)
+            print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
+
         else:
             while len(game_two) < 0 or len(choice) < 0:
                 if len(game_two) < 0 or len(choice) < 0:
                     choice = input("Rock, Paper, or Scissors? Type 'r' for rock, 'p' for paper or 's' for scissors: ").lower()
-
-
+      
     while your_score <= str(10) or ai_score <= str(10):
-        main()
+                main()
+               
 
-
+    
 main()
