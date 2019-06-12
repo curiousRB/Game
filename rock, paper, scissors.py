@@ -7,7 +7,8 @@ name = input('what is your name? ').capitalize()
 print('nice to meet you', name)
 print(" ")
 time.sleep(1.5)
-ready = input("Are you ready to play? type 'yes' or 'no': ").lower()
+ready = input("Are you ready to play? type 'yes' or 'no': ")
+ready.lower()
 
 while len(ready) <= 0:
     if ready == 'yes':
@@ -31,7 +32,7 @@ while len(ready) <= 0:
 your_score = str(0)
 ai_score = str(0)
 if your_score <= str(10) or ai_score <= str(10):
-    def main(scores):
+    def main():
         global choice, your_score, ai_score
         your_score = str(0)
         ai_score = str(0)
@@ -98,7 +99,7 @@ if your_score <= str(10) or ai_score <= str(10):
                 if len(game_two) < 0 or len(choice) < 0:
                     choice = input("Rock, Paper, or Scissors? Type 'r' for rock, 'p' for paper or 's' for scissors: ").lower()
   
-      while your_score <= str(10) or ai_score <= str(10):
+    while your_score <= str(10) or ai_score <= str(10):
         main()
                     
     
