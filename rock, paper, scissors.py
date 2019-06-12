@@ -6,7 +6,7 @@ global your_score, ai_score
 name = input('what is your name? ').capitalize()
 print('nice to meet you', name)
 print(" ")
-time.sleep(2)
+time.sleep(1.5)
 ready = input("Are you ready to play? type 'yes' or 'no': ").lower()
 
 while len(ready) <= 0:
@@ -31,7 +31,7 @@ while len(ready) <= 0:
 your_score = str(0)
 ai_score = str(0)
 if your_score <= str(10) or ai_score <= str(10):
-    def main():
+    def main(scores):
         global choice, your_score, ai_score
         your_score = str(0)
         ai_score = str(0)
@@ -65,7 +65,7 @@ if your_score <= str(10) or ai_score <= str(10):
             time.sleep(1)
             print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
         elif game_two == 'rock' and choice == 's':
-            print('You won! Try again')
+            print('You lost! Try again')
             your_score += str(0)
             ai_score += str(1)
             time.sleep(1)
@@ -80,7 +80,7 @@ if your_score <= str(10) or ai_score <= str(10):
             your_score += str(0)
             ai_score += str(1)
             time.sleep(1)
-            print('chose rock and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
+            print('You chose rock and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
         elif game_two == 'scissors' and choice == 'r':
             print('You won! Try again')
             your_score += str(1)
@@ -88,19 +88,18 @@ if your_score <= str(10) or ai_score <= str(10):
             time.sleep(1)
             print('You chose rock and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
         elif game_two == 'rock' and choice == 'p':
-            print('You lost! Try again')
-            your_score += str(0)
-            ai_score += str(1)
+            print('You won! Try again')
+            your_score += str(1)
+            ai_score += str(0)
             print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
 
         else:
             while len(game_two) < 0 or len(choice) < 0:
                 if len(game_two) < 0 or len(choice) < 0:
                     choice = input("Rock, Paper, or Scissors? Type 'r' for rock, 'p' for paper or 's' for scissors: ").lower()
-      
-    while your_score <= str(10) or ai_score <= str(10):
-                main()
-               
-
+  
+      while your_score <= str(10) or ai_score <= str(10):
+        main()
+                    
     
 main()
