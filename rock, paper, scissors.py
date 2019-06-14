@@ -29,78 +29,79 @@ while len(ready) <= 0:
     else:
         ready = input("Are you ready to play? type 'yes' or 'no': ").lower()
 
+ai_score2 = str()
+your_score2 = str()
 your_score = str(0)
 ai_score = str(0)
-if your_score <= str(10) or ai_score <= str(10):
+while your_score <= str(10) or ai_score <= str(10):
     def main():
-        global choice, your_score, ai_score
-        your_score = str(0)
-        ai_score = str(0)
-        game = ['rock', 'paper', 'scissors']
-        game_two = random.choice(game)
-        time.sleep(1)
-        print(' ')
-        choice = input("Rock, Paper, or Scissors? Type 'r' for rock, 'p' for paper or 's' for scissors: ").lower()
-        if game_two == 'rock' and choice == 'r':
-            print('Draw! Try again')
-            your_score += str(0)
-            ai_score += str(0)
-            time.sleep(1)
-            print("You chose rock and your opponent chose", game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'paper' and choice == 'p':
-            print('Draw! Try again')
-            your_score += str(0)
-            ai_score += str(0)
-            time.sleep(1)
-            print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'scissors' and choice == 's':
-            print('Draw! Try again')
-            your_score += str(0)
-            ai_score += str(0)
-            time.sleep(1)
-            print('You chose scissors and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'scissors' and choice == 'p':
-            print('You lost! Try again')
-            your_score += str(0)
-            ai_score += str(1)
-            time.sleep(1)
-            print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'rock' and choice == 's':
-            print('You lost! Try again')
-            your_score += str(0)
-            ai_score += str(1)
-            time.sleep(1)
-            print('You chose scissors and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'paper' and choice == 's':
-            print('You won! Try again')
-            your_score += str(1)
-            ai_score += str(0)
-            print('You chose scissors and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'paper' and choice == 'r':
-            print('You lost! Try again')
-            your_score += str(0)
-            ai_score += str(1)
-            time.sleep(1)
-            print('You chose rock and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'scissors' and choice == 'r':
-            print('You won! Try again')
-            your_score += str(1)
-            ai_score += str(0)
-            time.sleep(1)
-            print('You chose rock and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
-        elif game_two == 'rock' and choice == 'p':
-            print('You won! Try again')
-            your_score += str(1)
-            ai_score += str(0)
-            print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
+      return your_score2, ai_score2;
 
-        else:
-            while len(game_two) < 0 or len(choice) < 0:
-                if len(game_two) < 0 or len(choice) < 0:
-                    choice = input("Rock, Paper, or Scissors? Type 'r' for rock, 'p' for paper or 's' for scissors: ").lower()
+      global choice, your_score2, ai_score2
+      your_score = str(0)
+      ai_score = str(0)
+      game = ['rock', 'paper', 'scissors']
+      game_two = random.choice(game)
+      time.sleep(1)
+      print(' ')
+      choice = input("Rock, Paper, or Scissors? Type 'r' for rock, 'p' for paper or 's' for scissors: ").lower()
+      if game_two == 'rock' and choice == 'r':
+          print('Draw! Try again')
+          your_score2 = your_score + str(0)
+          ai_score2 = ai_score + str(0)
+          time.sleep(1)
+          print("You chose rock and your opponent chose", game_two, '.', 'The scores are', your_score2 + '-' + ai_score)
+      elif game_two == 'paper' and choice == 'p':
+          print('Draw! Try again')
+          your_score += str(0)
+          ai_score += str(0)
+          time.sleep(1)
+          print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
+      elif game_two == 'scissors' and choice == 's':
+          print('Draw! Try again')
+          your_score += str(0)
+          ai_score += str(0)
+          time.sleep(1)
+          print('You chose scissors and your opponent chose', game_two, '.', 'The scores are', your_score + '-' + ai_score)
+      elif game_two == 'scissors' and choice == 'p':
+          print('You lost! Try again')
+          your_score += str(0)
+          ai_score += str(1)
+          time.sleep(1)
+          print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score2 + '-' + ai_score2)
+      elif game_two == 'rock' and choice == 's':
+          print('You lost! Try again')
+          your_score += str(0)
+          ai_score += str(1)
+          time.sleep(1)
+          print('You chose scissors and your opponent chose', game_two, '.', 'The scores are', your_score2 + '-' + ai_score2)
+      elif game_two == 'paper' and choice == 's':
+          print('You won! Try again')
+          your_score += str(1)
+          ai_score += str(0)
+          print('You chose scissors and your opponent chose', game_two, '.', 'The scores are', your_score2 + '-' + ai_score2)
+      elif game_two == 'paper' and choice == 'r':
+          print('You lost! Try again')
+          your_score += str(0)
+          ai_score += str(1)
+          time.sleep(1)
+          print('You chose rock and your opponent chose', game_two, '.', 'The scores are', your_score2 + '-' + ai_score2)
+      elif game_two == 'scissors' and choice == 'r':
+          print('You won! Try again')
+          your_score += str(1)
+          ai_score += str(0)
+          time.sleep(1)
+          print('You chose rock and your opponent chose', game_two, '.', 'The scores are', your_score2 + '-' + ai_score2)
+      elif game_two == 'rock' and choice == 'p':
+          print('You won! Try again')
+          your_score += str(1)
+          ai_score += str(0)
+          print('You chose paper and your opponent chose', game_two, '.', 'The scores are', your_score2 + '-' + ai_score2)
+
+      else:
+          while len(game_two) < 0 or len(choice) < 0:
+              if len(game_two) < 0 or len(choice) < 0:
+                  choice = input("Rock, Paper, or Scissors? Type 'r' for rock, 'p' for paper or 's' for scissors: ").lower()
+                  
   
-    while your_score <= str(10) or ai_score <= str(10):
-        main()
-                    
-    
 main()
